@@ -1,7 +1,6 @@
 import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
-import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -10,30 +9,27 @@ import { Link } from 'expo-router';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#000000' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={{ uri: 'https://www.bing.com/th/id/OIP.HFm3z-DsxbZgzAjnYG6WjgHaHa?w=193&h=193&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2' }}
           style={styles.reactLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
+        <Image
+          source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvwxc2hmSxyZYEkw8B-YQNPdf5bOGVFndZgNMh5A7Mfw&s=10' }}
+          style={styles.waveImage}
+        />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+        <ThemedText type="subtitle">Gux'</ThemedText>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
+         <ThemedText type="defaultSemiBold"></ThemedText>
+
           <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
+
+          </ThemedText>
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
@@ -89,10 +85,13 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
+    height: 170,
     width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+    bottom: -30,
+    alignSelf: 'center',
+  },
+  waveImage: {
+    width: 32,
+    height: 32,
   },
 });
