@@ -4,7 +4,7 @@
     "slug": "20262_ddm1_gustavohenrique1",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/cruz-removebg-preview.png",
     "scheme": "20262ddm1gustavohenrique1",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -23,7 +23,7 @@
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/assets/images/cruz-removebg-preview.png"
     },
     "plugins": [
       "expo-router",
