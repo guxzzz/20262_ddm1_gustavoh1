@@ -2,9 +2,14 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 
 import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import Octicons from '@expo/vector-icons/Octicons';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import Feather from '@expo/vector-icons/Feather';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -19,15 +24,29 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'zzz',
+          tabBarIcon: ({ color }) => <Feather name="moon" size={25}  color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="music"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Music',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="cross-outline" size={25} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="tlou"
+        options={{
+          title: 'TLOU',
+          tabBarIcon: ({ color }) => <AntDesign name="spotify" size={25} color={color} />
+        }}
+      />
+      <Tabs.Screen
+        name="fashion"
+        options={{
+          title: 'Fashion',
+          tabBarIcon: ({ color }) => <Ionicons name="sparkles-outline" size={25} color={color} />
         }}
       />
     </Tabs>
