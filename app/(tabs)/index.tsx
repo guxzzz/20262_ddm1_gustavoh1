@@ -12,8 +12,9 @@ export default function HomeScreen() {
         <Image
           source={require("@/assets/images/ch.jpg")}
           style={styles.headerImage}
-          contentFit="contain"
+          contentFit="cover"
         />
+        <View style={styles.headerOverlay} />
       </View>
 
       <ThemedView style={styles.bodyContainer}>
@@ -21,49 +22,50 @@ export default function HomeScreen() {
           <Image
             source={require("@/assets/images/cruz-removebg-preview.png")}
             style={styles.waveImage}
+            contentFit="contain"
           />
         </ThemedView>
 
+          <ThemedText type="subtitle" style={styles.profileName}>{`gux'`}</ThemedText>
+          <ThemedView style={styles.quoteCard}>
+            <ThemedText type="defaultSemiBold" style={styles.quoteText}> “O medo é uma ferramenta” </ThemedText>            
+          </ThemedView>
+
+         <ThemedView style={styles.quoteCard}>
+            <ThemedText type="defaultSemiBold" style={styles.quoteText}> Gustavo Henrique  </ThemedText>            
+          </ThemedView>
+
         <ThemedView style={styles.stepContainer}>
-          <ThemedText type="subtitle"> {`gux'`}</ThemedText>
-          <ThemedText type="defaultSemiBold">
-            “O medo é uma ferramenta”
-          </ThemedText>
-        </ThemedView>
-        <ThemedView style={styles.stepContainer}>
-          <Link href="/modal">
-            <Link.Trigger>
-              <ThemedText type="subtitle">zzz</ThemedText>
-            </Link.Trigger>
-            <Link.Preview />
-            <Link.Menu>
-              <Link.MenuAction
-                title="Action"
-                icon="cube"
-                onPress={() => alert("Action pressed")}
-              />
-              <Link.MenuAction
-                title="Share"
-                icon="square.and.arrow.up"
-                onPress={() => alert("Share pressed")}
-              />
-              <Link.Menu title="More" icon="ellipsis">
+          <View style={styles.linkWrapper}>
+            <Link href="/modal">
+              <Link.Trigger>
+                <ThemedText type="subtitle" style={styles.linkText}>zzz</ThemedText>
+              </Link.Trigger>
+              <Link.Preview />
+              <Link.Menu>
                 <Link.MenuAction
-                  title="Delete"
-                  icon="trash"
-                  destructive
-                  onPress={() => alert("Delete pressed")}
+                  title="Action"
+                  icon="cube"
+                  onPress={() => alert("Action pressed")}
                 />
+                <Link.MenuAction
+                  title="Share"
+                  icon="square.and.arrow.up"
+                  onPress={() => alert("Share pressed")}
+                />
+                <Link.Menu title="More" icon="ellipsis">
+                  <Link.MenuAction
+                    title="Delete"
+                    icon="trash"
+                    destructive
+                    onPress={() => alert("Delete pressed")}
+                  />
+                </Link.Menu>
               </Link.Menu>
-            </Link.Menu>
-          </Link>
-          <ThemedText>Clique acima.</ThemedText>
+            </Link>
+          </View>
+          <ThemedText style={styles.hintText}>Clique acima.</ThemedText>
         </ThemedView>
-        <Image
-          source={require("@/assets/images/ellie.webp")}
-          style={styles.bannerImage}
-          contentFit="contain"
-        />
       </ThemedView>
     </ScrollView>
   );
@@ -72,42 +74,74 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   scrollContent: {
     paddingBottom: 40,
-    backgroundColor: "#000000",
+    backgroundColor: "#0A0A0C",
   },
   headerContainer: {
-    height: 250,
+    height: 240,
     backgroundColor: "#000000",
-    justifyContent: "center",
+   justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
+    position: "relative",
   },
   headerImage: {
-    height: "100%",
-    width: "100%",
-    position: "absolute",
+    height: 300,
+    width: 300,
+  },
+  headerOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
   },
   bodyContainer: {
     padding: 20,
-    gap: 16,
+    gap: 20,
+    backgroundColor: "#0A0A0C",
   },
   titleContainer: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
+    backgroundColor: "transparent",
   },
   stepContainer: {
     gap: 8,
-    marginBottom: 8,
+    backgroundColor: "transparent",
+  },
+  profileName: {
+    letterSpacing: 0.5,
+  },
+  quoteCard: {
+    backgroundColor: "#18181B",
+    padding: 16,
+    borderRadius: 12,
+    borderLeftWidth: 3,
+    borderLeftColor: "#52525B",
+    borderWidth: 1,
+    borderColor: "#27272A",
+  },
+  quoteText: {
+    color: "#E4E4E7",
+  },
+  linkWrapper: {
+    backgroundColor: "#18181B",
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#27272A",
+    alignItems: "center",
+  },
+  linkText: {
+    color: "#FFFFFF",
+    textAlign: "center",
+  },
+  hintText: {
+    fontSize: 13,
+    color: "#A1A1AA",
+    textAlign: "center",
+    marginTop: 2,
   },
   waveImage: {
-    width: 40,
-    height: 40,
-  },
-  bannerImage: {
-    width: 300,
-    aspectRatio: 16 / 9,
-    alignSelf: "center",
-    borderRadius: 12,
-    marginVertical: 10,
+    width: 44,
+    height: 44,
   },
 });
