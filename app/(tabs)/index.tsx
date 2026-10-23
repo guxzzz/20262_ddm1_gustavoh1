@@ -26,20 +26,36 @@ export default function HomeScreen() {
           />
         </ThemedView>
 
-          <ThemedText type="subtitle" style={styles.profileName}>{`gux'`}</ThemedText>
-          <ThemedView style={styles.quoteCard}>
-            <ThemedText type="defaultSemiBold" style={styles.quoteText}> “O medo é uma ferramenta” </ThemedText>            
-          </ThemedView>
+        <ThemedText
+          type="subtitle"
+          style={styles.profileName}
+        >{`gux'`}</ThemedText>
+        <ThemedView style={styles.quoteCard}>
+          <ThemedText type="defaultSemiBold" style={styles.quoteText}>
+            {" "}
+            “O medo é uma ferramenta”{" "}
+          </ThemedText>
+        </ThemedView>
 
-         <ThemedView style={styles.quoteCard}>
-            <ThemedText type="defaultSemiBold" style={styles.quoteText}> Gustavo Henrique  </ThemedText>            
-          </ThemedView>
+        <ThemedView style={styles.quoteCard}>
+          <ThemedText type="defaultSemiBold" style={styles.quoteText}>
+            Nome: Gustavo Henrique{" "}
+          </ThemedText>
+          <ThemedText type="defaultSemiBold" style={styles.quoteText}>
+            Idade: 17
+          </ThemedText>
+          <ThemedText type="defaultSemiBold" style={styles.quoteText}>
+            Sala: 2 MIN
+          </ThemedText>
+        </ThemedView>
 
         <ThemedView style={styles.stepContainer}>
           <View style={styles.linkWrapper}>
             <Link href="/modal">
               <Link.Trigger>
-                <ThemedText type="subtitle" style={styles.linkText}>zzz</ThemedText>
+                <ThemedText type="subtitle" style={styles.linkText}>
+                  zzz
+                </ThemedText>
               </Link.Trigger>
               <Link.Preview />
               <Link.Menu>
@@ -79,7 +95,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     height: 240,
     backgroundColor: "#000000",
-   justifyContent: "center",
+    justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
     position: "relative",
