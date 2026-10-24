@@ -13,7 +13,6 @@ export default function MusicScreen() {
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContent} bounces={true}>
-      {/* Imagem de Cabeçalho com Overlay */}
       <View style={styles.headerContainer}>
         <Image
           source={require("@/assets/images/ch.jpg")}
@@ -24,7 +23,6 @@ export default function MusicScreen() {
       </View>
 
       <ThemedView style={styles.bodyContainer}>
-        {/* Título e Ícone Geral */}
         <ThemedView style={styles.titleContainer}>
           <Image
             source={require("@/assets/images/cruz-removebg-preview.png")}
@@ -193,7 +191,7 @@ const styles = StyleSheet.create({
   },
   spotifyContainer: {
     height: 400,
-    width: 900,
+    width: "100%",
     borderRadius: 12,
     overflow: "hidden",
     borderWidth: 1,
