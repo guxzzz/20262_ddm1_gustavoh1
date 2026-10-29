@@ -45,7 +45,7 @@ export default function MusicScreen() {
           <View style={styles.playlistColumn}>
             <ThemedView style={styles.infoCard}>
               <ThemedText type="subtitle" style={styles.cardTitle}>
-                Playlist: gux'
+                Playlist: {`gux'`}
               </ThemedText>
               <ThemedText type="defaultSemiBold" style={styles.quoteText}>
                 525 músicas

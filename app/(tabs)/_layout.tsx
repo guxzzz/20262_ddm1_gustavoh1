@@ -5,8 +5,6 @@ import { HapticTab } from "@/components/haptic-tab";
 import { Colors } from "@/constants/theme";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import Octicons from "@expo/vector-icons/Octicons";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import Feather from "@expo/vector-icons/Feather";
 import Ionicons from "@expo/vector-icons/Ionicons";

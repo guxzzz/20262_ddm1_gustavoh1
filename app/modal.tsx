@@ -9,7 +9,7 @@ export default function ModalScreen() {
     <ThemedView style={styles.container}>
       <ThemedText type="title">im swag</ThemedText>
       <Link href="/" dismissTo style={styles.link}>
-        <ThemedText type="link">volte ao lixo</ThemedText>
+        <ThemedText type="link">voltar</ThemedText>
       </Link>
     </ThemedView>
   );
